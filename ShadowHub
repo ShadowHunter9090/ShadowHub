@@ -42,9 +42,10 @@ end)
 btns:Seperator()
 
 btns:Button("Ruby Hub", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub"))()
 DiscordLib:Notification("Bilgilendirme!", "Ruby Hub Aktiflesdirildi", "Tamam!")
 end)
 
+btns:Seperator()
 
 serv:Channel("by eymen53472")
