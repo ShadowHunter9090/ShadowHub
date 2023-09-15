@@ -2,9 +2,9 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/da
   
  local win = DiscordLib:Window("Shadow Hub V1.0") 
   
- local serv = win:Server("Brookhaven", "http://www.roblox.com/asset/?id=6031075938") 
+ local serv = win:Server("Shadow Hub V1.0", "") 
   
- local btns = serv:Channel("Brookhaven") 
+ local btns = serv:Channel("Brookhaven RP") 
   
  btns:Button("Redz Hub", function() 
  loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))() 
@@ -40,15 +40,8 @@ btns:Button("Troll Hub", function()
  end) 
 
 btns:Seperator()
-
- serv:Channel("by eymen53472") 
   
-
-
-  
- local serv = win:Server("Murderers vs Sheriff", "http://www.roblox.com/asset/?id=6031075938") 
-  
- local btns = serv:Channel("Murderers vs Sheriff") 
+ local btns = serv:Channel("Murderers vs Sheriff Duels") 
   
  btns:Button("Ranxware Hub", function() 
  loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))() 
@@ -77,14 +70,6 @@ btns:Button("Incurgence Hub", function()
  end) 
 
 btns:Seperator()
-  
- serv:Channel("by eymen53472")
-
-
-
-
-
-local serv = win:Server("Murder Mystery 2", "http://www.roblox.com/asset/?id=6031075938")
 
 local btns = serv:Channel("Murder Mystery 2")
 
@@ -117,12 +102,7 @@ btns:Button("Eclipse Hub", function()
 
 btns:Seperator()
 
-serv:Channel("by eymen53472")
-
-
-
-
-local serv = win:Server("Diğer", "http://www.roblox.com/asset/?id=6720824672")
+local serv = win:Server("Diğer", "https://create.roblox.com/marketplace/asset/6720824672/SettingIconWhite") 
 
 local btns = serv:Channel("Diğer")
 
@@ -131,5 +111,3 @@ btns:Button("İnfinite Yield", function()
  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
  DiscordLib:Notification("Bilgilendirme!", "İnfinite Yield Aktiflesdirildi", "Tamam!") 
  end) 
-
-btns:Seperator()
