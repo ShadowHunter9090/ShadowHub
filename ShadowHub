@@ -8,21 +8,21 @@ local btns = serv:Channel("Brookhaven")
 
 btns:Button("Redz Hub", function()
 loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
-DiscordLib:Notification("Bilgilendirme!", "Redz Hub Aktifleþdirildi", "Tamam!")
+DiscordLib:Notification("Bilgilendirme!", "Redz Hub Aktiflesdirildi", "Tamam!")
 end)
 
 btns:Seperator()
 
 btns:Button("Icehub", function()
 loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
-DiscordLib:Notification("Bilgilendirme!", "IceHub Aktifledirildi", "Tamam!")
+DiscordLib:Notification("Bilgilendirme!", "IceHub Aktiflesdirildi", "Tamam!")
 end)
 
 btns:Seperator()
 
 btns:Button("Space Hub", function()
 loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
-DiscordLib:Notification("Bilgilendirme!", "Space Hub Aktifleþdirildi", "Tamam!")
+DiscordLib:Notification("Bilgilendirme!", "Space Hub Aktiflesdirildi", "Tamam!")
 end)
 
 btns:Seperator()
@@ -36,16 +36,15 @@ local btns = serv:Channel("Murderers vs Sheriff")
 
 btns:Button("Ranxware Hub", function()
 loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
-DiscordLib:Notification("Bilgilendirme!", "Ranxware Hub Aktifleþdirildi", "Tamam!")
+DiscordLib:Notification("Bilgilendirme!", "Ranxware Hub Aktiflesdirildi", "Tamam!")
 end)
 
 btns:Seperator()
 
 btns:Button("Ruby Hub", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))()
-DiscordLib:Notification("Bilgilendirme!", "Ruby Hub Aktifleþdirildi", "Tamam!")
+DiscordLib:Notification("Bilgilendirme!", "Ruby Hub Aktiflesdirildi", "Tamam!")
 end)
 
-btns:Seperator()
 
 serv:Channel("by eymen53472")
