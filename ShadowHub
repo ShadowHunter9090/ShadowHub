@@ -4,7 +4,7 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/da
   
  local serv = win:Server("Shadow Hub V1.0", "") 
   
- local btns = serv:Channel("Brookhaven RP") 
+ local btns = serv:Channel("Brookhaven 🏡RP") 
   
  btns:Button("Redz Hub", function() 
  loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))() 
@@ -41,7 +41,7 @@ btns:Button("Troll Hub", function()
 
 btns:Seperator()
   
- local btns = serv:Channel("Murderers vs Sheriff Duels") 
+ local btns = serv:Channel("Murderers vs Sheriff") 
   
  btns:Button("Ranxware Hub", function() 
  loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))() 
@@ -102,7 +102,7 @@ btns:Button("Eclipse Hub", function()
 
 btns:Seperator()
 
-local serv = win:Server("Diğer", "https://create.roblox.com/marketplace/asset/6720824672/SettingIconWhite") 
+local serv = win:Server("Diğer", "http://www.roblox.com/asset/?id=6031075938") 
 
 local btns = serv:Channel("Diğer")
 
@@ -110,4 +110,6 @@ local btns = serv:Channel("Diğer")
 btns:Button("İnfinite Yield", function() 
  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
  DiscordLib:Notification("Bilgilendirme!", "İnfinite Yield Aktiflesdirildi", "Tamam!") 
- end) 
+ end)
+
+btns:Seperator()
