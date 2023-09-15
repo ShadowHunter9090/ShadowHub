@@ -46,4 +46,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssher
 DiscordLib:Notification("Bilgilendirme!", "Ruby Hub Aktifleþdirildi", "Tamam!")
 end)
 
+btns:Seperator()
+
 serv:Channel("by eymen53472")
