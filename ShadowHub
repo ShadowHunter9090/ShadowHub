@@ -1,0 +1,49 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Shadow Hub V1.0")
+
+local serv = win:Server("Brookhaven Hileleri", "http://www.roblox.com/asset/?id=6031075938")
+
+local btns = serv:Channel("Brookhaven")
+
+btns:Button("Redz Hub", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
+DiscordLib:Notification("Bilgilendirme!", "Redz Hub Aktifleþdirildi", "Tamam!")
+end)
+
+btns:Seperator()
+
+btns:Button("Icehub", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
+DiscordLib:Notification("Bilgilendirme!", "IceHub Aktifledirildi", "Tamam!")
+end)
+
+btns:Seperator()
+
+btns:Button("Space Hub", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
+DiscordLib:Notification("Bilgilendirme!", "Space Hub Aktifleþdirildi", "Tamam!")
+end)
+
+btns:Seperator()
+
+serv:Channel("by eymen53472")
+
+
+local serv = win:Server("Murderers vs Sheriff", "http://www.roblox.com/asset/?id=6031075938")
+
+local btns = serv:Channel("Murderers vs Sheriff")
+
+btns:Button("Ranxware Hub", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
+DiscordLib:Notification("Bilgilendirme!", "Ranxware Hub Aktifleþdirildi", "Tamam!")
+end)
+
+btns:Seperator()
+
+btns:Button("Ruby Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))()
+DiscordLib:Notification("Bilgilendirme!", "Ruby Hub Aktifleþdirildi", "Tamam!")
+end)
+
+serv:Channel("by eymen53472")
