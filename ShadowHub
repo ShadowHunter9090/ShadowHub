@@ -126,12 +126,7 @@ btns:Button("Pet Sim X Script", function()
  end) 
 
 btns:Seperator()
-
-btns:Button("MD", function() 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc715fb43902af268c335a5c7269be5e.lua"))()
- DiscordLib:Notification("Bilgilendirme!", "Pet Sim X Script Aktiflesdirildi", "Tamam!") 
- end)
-
+ 
 local btns = serv:Channel("Universal Admin S.") 
 
 
