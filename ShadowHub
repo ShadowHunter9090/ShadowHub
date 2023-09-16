@@ -3,51 +3,6 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/da
  local win = DiscordLib:Window("Shadow Hub V1.0") 
   
  local serv = win:Server("Shadow Hub V1.1", "http://www.roblox.com/asset/?id=6031075938") 
-  
-local btns = serv:Channel("Universal Admin S.")
-
-
-btns:Button("İnfinite Yield", function() 
- loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
- DiscordLib:Notification("Bilgilendirme!", "İnfinite Yield Aktiflesdirildi", "Tamam!") 
- end)
-
-btns:Seperator()
-
-btns:Button("BloodyBurns", function() 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua"))()
- DiscordLib:Notification("Bilgilendirme!", "BloodyBurns Aktiflesdirildi", "Tamam!") 
- end)
-
-btns:Seperator()
-
-btns:Button("Fates Admin", function() 
- loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-fates-admin-6785"))()
- DiscordLib:Notification("Bilgilendirme!", "Fates Admin Aktiflesdirildi", "Tamam!") 
- end)
-
-btns:Seperator()
-
-btns:Button("HomeBrew Admin", function() 
- loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-or-FE-Homebrew-Admin-3106"))()
- DiscordLib:Notification("Bilgilendirme!", "HomeBrew Aktiflesdirildi", "Tamam!") 
- end)loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc715fb43902af268c335a5c7269be5e.lua"))()
-
-btns:Seperator()
-
-btns:Button("Nameless Admin", function() 
- loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-6762"))()
- DiscordLib:Notification("Bilgilendirme!", "Nameless Admin Aktiflesdirildi", "Tamam!") 
- end)
-
-btns:Seperator()
-
-btns:Button("CMD-X Admin", function() 
- loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Unevirsal-Admin-6144"))()
- DiscordLib:Notification("Bilgilendirme!", "CMD-X Aktiflesdirildi", "Tamam!") 
- end)
-
-btns:Seperator()
 
  local btns = serv:Channel("Brookhaven 🏡RP") 
   
@@ -175,4 +130,49 @@ btns:Seperator()
 btns:Button("MD", function() 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc715fb43902af268c335a5c7269be5e.lua"))()
  DiscordLib:Notification("Bilgilendirme!", "Pet Sim X Script Aktiflesdirildi", "Tamam!") 
- end) 
+ end)
+
+local btns = serv:Channel("Universal Admin S.") 
+
+
+btns:Button("İnfinite Yield", function() 
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+ DiscordLib:Notification("Bilgilendirme!", "İnfinite Yield Aktiflesdirildi", "Tamam!") 
+ end)
+
+btns:Seperator()
+
+btns:Button("BloodyBurns", function() 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua"))()
+ DiscordLib:Notification("Bilgilendirme!", "BloodyBurns Aktiflesdirildi", "Tamam!") 
+ end)
+
+btns:Seperator()
+
+btns:Button("Fates Admin", function() 
+ loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-fates-admin-6785"))()
+ DiscordLib:Notification("Bilgilendirme!", "Fates Admin Aktiflesdirildi", "Tamam!") 
+ end)
+
+btns:Seperator()
+
+btns:Button("HomeBrew Admin", function() 
+ loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-or-FE-Homebrew-Admin-3106"))()
+ DiscordLib:Notification("Bilgilendirme!", "HomeBrew Aktiflesdirildi", "Tamam!") 
+ end)loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc715fb43902af268c335a5c7269be5e.lua"))()
+
+btns:Seperator()
+
+btns:Button("Nameless Admin", function() 
+ loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-6762"))()
+ DiscordLib:Notification("Bilgilendirme!", "Nameless Admin Aktiflesdirildi", "Tamam!") 
+ end)
+
+btns:Seperator()
+
+btns:Button("CMD-X Admin", function() 
+ loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Unevirsal-Admin-6144"))()
+ DiscordLib:Notification("Bilgilendirme!", "CMD-X Aktiflesdirildi", "Tamam!") 
+ end)
+
+btns:Seperator()
