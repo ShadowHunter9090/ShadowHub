@@ -2,7 +2,7 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/da
   
  local win = DiscordLib:Window("Shadow Hub V1.0") 
   
- local serv = win:Server("Shadow Hub V1.1", "http://www.roblox.com/asset/?id=6031075938") 
+ local serv = win:Server("Shadow Hub V1.1","http://www.roblox.com/asset/?id=6031075938") 
 
  local btns = serv:Channel("Brookhaven 🏡RP") 
   
