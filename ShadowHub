@@ -2,7 +2,7 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/da
   
  local win = DiscordLib:Window("Shadow Hub V1.0") 
   
- local serv = win:Server("Shadow Hub V1.0", "") 
+ local serv = win:Server("Shadow Hub V1.1", "") 
   
  local btns = serv:Channel("Brookhaven 🏡RP") 
   
@@ -118,15 +118,30 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Sussy-Tech/Scripts/ma
 
 btns:Seperator()
 
+local btns = serv:Channel("Pet Simulator")
+
+btns:Button("Pet Sim X Script", function() 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/DeezScripts/PsxStScripts69/main/scripts/sign/petchanger/unallhoverboards"))();
+ DiscordLib:Notification("Bilgilendirme!", "Pet Sim X Script Aktiflesdirildi", "Tamam!") 
+ end) 
+
+btns:Seperator()
 
 local serv = win:Server("Diğer", "http://www.roblox.com/asset/?id=6031075938") 
 
-local btns = serv:Channel("Diğer")
+local btns = serv:Channel("Admin Scripts")
 
 
 btns:Button("İnfinite Yield", function() 
  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
  DiscordLib:Notification("Bilgilendirme!", "İnfinite Yield Aktiflesdirildi", "Tamam!") 
+ end)
+
+btns:Seperator()
+
+btns:Button("BloodyBurns", function() 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua"))()
+ DiscordLib:Notification("Bilgilendirme!", "BloodyBurns Aktiflesdirildi", "Tamam!") 
  end)
 
 btns:Seperator()
