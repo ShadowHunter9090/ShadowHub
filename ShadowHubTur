@@ -1,1 +1,184 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ShadowHunter9090/ShadowHub/main/ShadowHubOrionLibraryCode')))()
+local Window = OrionLib:MakeWindow({Name = "ShadowHub", HidePremium = false, SaveConfig = true, ConfigFolder = "ShadowHub"})
 
+
+OrionLib:MakeNotification({
+	Name = "Shadow Hub Mesajı",
+	Content = "Shadow Hub Çalıştı İyi Oyunlar.",
+	Image = "rbxassetid://7733799901",
+	Time = 7
+})
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Ev",
+	Icon = "rbxassetid://7733960981",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Krediler"
+})
+
+
+Tab:AddButton({
+	Name = "Kurucu:eymen53472",
+	Callback = function()
+      		print("ShadowHub en iyisi")
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Kod:eymen53472",
+	Callback = function()
+      		print("ShadowHub en iyisi")
+  	end    
+})
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Brookhaven 🏡RP",
+	Icon = "rbxassetid://7733917120",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Brookhaven Hileleri"
+})
+
+
+Tab:AddButton({
+	Name = "Redz Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "İceHub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "SpaceHub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
+  	end    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Murderer Vs S.D.",
+	Icon = "rbxassetid://7733917120",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Murderer Vs Sheriff Duels Hileleri"
+})
+
+
+Tab:AddButton({
+	Name = "Fastest Auto Farm Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murderers-VS-Sheriffs-Duels-Fastest-Auto-Farm-GUI-7659"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Ranxware Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Insurgent hub",
+	Callback = function()
+      	 loadstring(game:HttpGet('https://raw.githubusercontent.com/InsurgenceHub/IncurgenceHub.github.io/main/InsurgentHubOfficial'))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Oasis Hub",
+	Callback = function()
+      	 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/bruvzz/oasishub/main/script"))()
+  	end    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Murder Mystery 2",
+	Icon = "rbxassetid://7733917120",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Murder Mystery 2 Hileleri"
+})
+
+
+Tab:AddButton({
+	Name = "AutoFarm",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-AutoFarm-Coins_503"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Eclipse",
+	Callback = function()
+      		getgenv().mainKey = "nil";
+ 
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Kidachi Two",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
+  	end    
+})
