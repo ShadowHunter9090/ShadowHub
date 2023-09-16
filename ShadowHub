@@ -92,7 +92,6 @@ btns:Button("Eclipse Hub", function()
 btns:Seperator()
 
 local btns = serv:Channel("Blade Ball")
-
 btns:Button("Auto Parry", function() 
  getgenv().ScriptConfig = {
     -- Distance in stud before the automatic triggers,
