@@ -49,7 +49,7 @@ guiRH = Instance.new("ScreenGui",Orion)
 nextb = Instance.new("ImageButton", guiRH)
 gui = Instance.new("UICorner", nextb)
 
-Orion.Name = "ShadowHub <Orion Lib>"
+Orion.Name = "Shadow Hub <Orion Lib>"
 
 guiRH.Name = "Minimize"
 nextb.Position = UDim2.new(0,100,0,60)
@@ -472,14 +472,14 @@ function OrionLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "ShadowHub"
+	WindowConfig.Name = WindowConfig.Name or "Shadow Hub"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "ShadowHub"
+	WindowConfig.IntroText = WindowConfig.IntroText or "Shadow Hub"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
@@ -669,7 +669,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	  Orion:Destroy()
 	end)
 
-	OrionLib:MakeNotification({Name = Shadow Hub",Content = "Executando Script..." ,Image = "rbxassetid://",Time = 5})
+	OrionLib:MakeNotification({Name = "Shadow Hub",Content = "Executando Script..." ,Image = "rbxassetid://",Time = 5})
 
 	local function LoadSequence()
 		MainWindow.Visible = false
