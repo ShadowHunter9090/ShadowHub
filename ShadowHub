@@ -149,5 +149,3 @@ btns:Seperator()
 btns:Button("CMD-X Admin", function()  loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Unevirsal-Admin-6144"))()
  DiscordLib:Notification("Bilgilendirme!", "CMD-X Aktiflesdirildi", "Tamam!") 
  end)
-
-btns:Seperator()
