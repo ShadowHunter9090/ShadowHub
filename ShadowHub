@@ -1,0 +1,13 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ShadowHunter9090/ShadowHub/main/ShadowHubOrionLibraryCode')))()
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local Window = OrionLib:MakeWindow({Name = "Shadow Hub : "..gameName, HidePremium = false, SaveConfig = true, ConfigFolder = "teste"})
+
+local Shadow = Window:MakeTab({Name = "Main",Icon = "rbxassetid://13687632207",PremiumOnly = false})
+
+Shadow:AddButton({Name = "Shadow Hub In English",Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShadowHunter9090/ShadowHub/main/ShadowHubEng"))()
+end})
+
+Shadow:AddButton({Name = "Shadow Hub Türkçe Versiyon",Callback = function()
+loadstring(game:HttGet("https://raw.githubusercontent.com/ShadowHunter9090/ShadowHub/main/ShadowHubTur"))()
+end})
