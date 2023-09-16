@@ -47,8 +47,7 @@ btns:Button("CMD-X Admin", function()
  DiscordLib:Notification("Bilgilendirme!", "CMD-X Aktiflesdirildi", "Tamam!") 
  end)
 
-
-
+btns:Seperator()
 
  local btns = serv:Channel("Brookhaven 🏡RP") 
   
