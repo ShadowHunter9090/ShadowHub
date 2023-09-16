@@ -9,7 +9,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ShadowHunter9090/Shad
 end})
 
 
-Shadow:AddButton({Name = "Shadow Hub In English",Callback = function()
-loadstring(game:HttGet("https://raw.githubusercontent.com/ShadowHunter9090/ShadowHub/main/ShadowHubTur"))()
+Shadow:AddButton({Name = "Shadow Hub ama Türkçe",Callback = function()
+
 end})
 
