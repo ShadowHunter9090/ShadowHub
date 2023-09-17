@@ -285,19 +285,6 @@ Tab:AddSlider({
 })
 
 
-Tab:AddTextbox({
-	Name = "deneme 1",
-	Default = "deneme2",
-	TextDisappear = true,
-	Callback = function(Value)
-		WalkSpeed = Value
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-         Value = WalkSpeed
-	end	  
-})
-
-
-
 Tab:AddButton({
 	Name = "Hızı Sıfırla",
 	Callback = function()
