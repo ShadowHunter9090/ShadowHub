@@ -206,6 +206,23 @@ local Section = Tab:AddSection({
 })
 
 
+local WalkSpeed
+
+local JumpPower
+
+
+Tab:AddToggle({
+	Name = "Otur",
+	Default = false,
+	Callback = function(Value)
+		if Value == true then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = true
+        elseif Value == false then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = false
+      end
+})
+
+
 local Default_Disable = false;
 Tab1:AddToggle({
 	Name = "Sınırsız Zıplama",
@@ -285,6 +302,8 @@ JumpPower = 50
 
 
 
+
+
 local inf_jump_conn1 = nil;
 local inf_jump_conn2 = nil;
 
@@ -314,23 +333,3 @@ function ToggleInfJump(toggle)
         inf_jump_conn2 = nil;
     end
 end
-
-
-
-
-
-local WalkSpeed
-
-local JumpPower
-
-
-Tab:AddToggle({
-	Name = "Otur",
-	Default = false,
-	Callback = function(Value)
-		if Value == true then
-        game.Players.LocalPlayer.Character.Humanoid.Sit = true
-        elseif Value == false then
-        game.Players.LocalPlayer.Character.Humanoid.Sit = false
-      end
-})
