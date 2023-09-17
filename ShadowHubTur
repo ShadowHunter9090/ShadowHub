@@ -6,7 +6,7 @@ OrionLib:MakeNotification({
 	Name = "Shadow Hub Mesajı",
 	Content = "Shadow Hub Çalıştı İyi Oyunlar.",
 	Image = "rbxassetid://7733715400",
-	Time = 7
+	Time = 5
 })
 
 
