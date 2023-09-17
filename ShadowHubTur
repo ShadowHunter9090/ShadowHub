@@ -206,11 +206,6 @@ local Section = Tab:AddSection({
 })
 
 
-local WalkSpeed
-
-local JumpPower
-
-
 Tab:AddToggle({
 	Name = "Otur",
 	Default = false,
@@ -238,7 +233,9 @@ Tab1:AddToggle({
 
 
 
+local WalkSpeed
 
+local JumpPower
 
 Tab:AddSlider({
 	Name = "Hız",
