@@ -47,7 +47,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
 	Name = "Brookhaven 🏡RP",
-	Icon = "rbxassetid://7733917120",
+	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
