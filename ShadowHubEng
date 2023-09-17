@@ -93,7 +93,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
 	Name = "Murderer Vs S.D.",
-	Icon = "rbxassetid://7733917120",
+	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
@@ -147,7 +147,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
 	Name = "Murder Mystery 2",
-	Icon = "rbxassetid://7733917120",
+	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
