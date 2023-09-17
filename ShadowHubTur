@@ -59,24 +59,21 @@ local Section = Tab:AddSection({
 
 Tab:AddButton({
 	Name = "Redz Hub",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
+	Callback = function()	loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
   	end    
 })
 
 
 Tab:AddButton({
 	Name = "İceHub",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
+	Callback = function()	loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
   	end    
 })
 
 
 Tab:AddButton({
 	Name = "SpaceHub",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
+	Callback = function()	loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
   	end    
 })
 
@@ -105,32 +102,28 @@ local Section = Tab:AddSection({
 
 Tab:AddButton({
 	Name = "Fastest Auto Farm Gui",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murderers-VS-Sheriffs-Duels-Fastest-Auto-Farm-GUI-7659"))()
+	Callback = function() 	loadstring(game:HttpGet("https://scriptblox.com/raw/Murderers-VS-Sheriffs-Duels-Fastest-Auto-Farm-GUI-7659"))()
   	end    
 })
 
 
 Tab:AddButton({
 	Name = "Ranxware Hub",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
+	Callback = function()	loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
   	end    
 })
 
 
 Tab:AddButton({
 	Name = "Insurgent hub",
-	Callback = function()
-      	 loadstring(game:HttpGet('https://raw.githubusercontent.com/InsurgenceHub/IncurgenceHub.github.io/main/InsurgentHubOfficial'))()
+	Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/InsurgenceHub/IncurgenceHub.github.io/main/InsurgentHubOfficial'))()
   	end    
 })
 
 
 Tab:AddButton({
 	Name = "Oasis Hub",
-	Callback = function()
-      	 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/bruvzz/oasishub/main/script"))()
+	Callback = function() loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/bruvzz/oasishub/main/script"))()
   	end    
 })
 
@@ -160,8 +153,7 @@ local Section = Tab:AddSection({
 
 Tab:AddButton({
 	Name = "AutoFarm",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-AutoFarm-Coins_503"))()
+	Callback = function()	loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-AutoFarm-Coins_503"))()
   	end    
 })
 
@@ -178,8 +170,7 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 
 Tab:AddButton({
 	Name = "Kidachi Two",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
+	Callback = function()	loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
   	end    
 })
 
@@ -205,6 +196,11 @@ local Tab = Window:MakeTab({
 }) 
 
 
+local Section = Tab:AddSection({
+	Name = "Ayarlar"
+})
+
+
 local Default_Disable = false;
 Tab1:AddToggle({
 	Name = "Sınırsız Zıplama",
@@ -217,6 +213,7 @@ Tab1:AddToggle({
         ToggleInfJump(Value);
 	end    
 })
+
 
 local inf_jump_conn1 = nil;
 local inf_jump_conn2 = nil;
