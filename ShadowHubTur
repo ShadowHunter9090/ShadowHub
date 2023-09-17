@@ -183,3 +183,154 @@ Tab:AddButton({
 	loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
   	end    
 })
+
+
+
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Ayarlar",
+	Icon = "rbxassetid://7743866778",
+	PremiumOnly = false
+}) 
+
+
+local Section = Tab:AddSection({
+	Name = "Ayarlar"
+})
+
+
+local Default_Disable = false;
+Tab1:AddToggle({
+	Name = "Sınırsız Zıplama",
+	Default = false,
+	Callback = function(Value)
+        if Default_Disable == false then
+            Default_Disable = true;
+            return;
+        end
+        ToggleInfJump(Value);
+	end    
+})
+
+
+
+
+
+Tab:AddSlider({
+	Name = "Hız",
+	Min = 0,
+	Max = 100,
+	Default = 16,
+	Color = Color3.fromRGB(125,125,125),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(Value)
+    WalkSpeed = Value
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+         Value = WalkSpeed
+	end    
+})
+
+
+Tab:AddButton({
+	Name = "Hızı Sıfırla",
+	Callback = function()
+        OrionLib:MakeNotification({
+	Name = "               Hız",
+	Content = "Hızını Başarılıyla Sıfırladık Şimdiki Hızın (16)",
+	Image = "rbxassetid://0",
+	Time = 5
+})
+WalkSpeed = 16
+    	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+})
+
+
+Tab:AddSlider({
+	Name = "Zıplama Gücü",
+	Min = 0,
+	Max = 1000,
+	Default = 50,
+	Color = Color3.fromRGB(125,125,125),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(Value)
+    JumpPower = Value
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+        Value = JumpPower
+	end    
+})
+
+Tab:AddButton({
+	Name = "Zıplama Gücünü Sıfırla",
+	Callback = function()
+        OrionLib:MakeNotification({
+	Name = "               Zıplama Gücü",
+	Content = "Zıplama Gücün Başarılıyla Sıfırladık Şimdi Zıplama Gücün (50)",
+	Image = "rbxassetid://0",
+	Time = 5
+})
+JumpPower = 50
+    	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        end
+})
+
+
+
+local inf_jump_conn1 = nil;
+local inf_jump_conn2 = nil;
+
+local inf_jump_can_jump = true;
+
+function ToggleInfJump(toggle)
+    if toggle then
+        inf_jump_conn1 = uis.JumpRequest:Connect(function()
+            if (hum) and (hum.Health > 0) and (inf_jump_can_jump == true) then
+                hum:ChangeState(Enum.HumanoidStateType.Jumping);
+                inf_jump_can_jump = false;
+            end
+        end)
+        inf_jump_conn2 = uis.InputEnded:Connect(function(input, _)
+            if input.KeyCode == Enum.KeyCode.Space then
+                inf_jump_can_jump = true;
+            end
+        end)
+    else
+        pcall(function()
+            inf_jump_conn1:Disconnect();
+        end)
+        inf_jump_conn1 = nil;
+        pcall(function()
+            inf_jump_conn2:Disconnect();
+        end)
+        inf_jump_conn2 = nil;
+    end
+end
+
+
+
+
+
+local WalkSpeed
+
+local JumpPower
+
+
+Tab:AddToggle({
+	Name = "Otur",
+	Default = false,
+	Callback = function(Value)
+		if Value == true then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = true
+        elseif Value == false then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = false
+      end
+})
