@@ -13,19 +13,19 @@ OrionLib:MakeNotification({
 
 
 
-local Tab = Window:MakeTab({
+local Tab1 = Window:MakeTab({
 	Name = "Ev",
 	Icon = "rbxassetid://7733960981",
 	PremiumOnly = false
 })
 
 
-local Section = Tab:AddSection({
+local Section = Tab1:AddSection({
 	Name = "Krediler"
 })
 
 
-Tab:AddButton({
+Tab1:AddButton({
 	Name = "Kurucu:eymen53472",
 	Callback = function()
       		print("ShadowHub en iyisi")
@@ -33,7 +33,7 @@ Tab:AddButton({
 })
 
 
-Tab:AddButton({
+Tab1:AddButton({
 	Name = "Kod:eymen53472",
 	Callback = function()
       		print("ShadowHub en iyisi")
@@ -44,19 +44,19 @@ Tab:AddButton({
 
 
 
-local Tab = Window:MakeTab({
+local Tab2 = Window:MakeTab({
 	Name = "Brookhaven 🏡RP",
 	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
 
-local Section = Tab:AddSection({
+local Section = Tab2:AddSection({
 	Name = "Brookhaven Hileleri"
 })
 
 
-Tab:AddButton({
+Tab2:AddButton({
 	Name = "Redz Hub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
@@ -64,7 +64,7 @@ Tab:AddButton({
 })
 
 
-Tab:AddButton({
+Tab2:AddButton({
 	Name = "İceHub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
@@ -72,7 +72,7 @@ Tab:AddButton({
 })
 
 
-Tab:AddButton({
+Tab2:AddButton({
 	Name = "SpaceHub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
@@ -90,19 +90,19 @@ Tab:AddButton({
 
 
 
-local Tab = Window:MakeTab({
+local Tab3 = Window:MakeTab({
 	Name = "Murderer Vs S.D.",
 	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
 
-local Section = Tab:AddSection({
+local Section = Tab3:AddSection({
 	Name = "Murderer Vs Sheriff Duels Hileleri"
 })
 
 
-Tab:AddButton({
+Tab3:AddButton({
 	Name = "Fastest Auto Farm Gui",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Murderers-VS-Sheriffs-Duels-Fastest-Auto-Farm-GUI-7659"))()
@@ -110,7 +110,7 @@ Tab:AddButton({
 })
 
 
-Tab:AddButton({
+Tab3:AddButton({
 	Name = "Ranxware Hub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
@@ -118,7 +118,7 @@ Tab:AddButton({
 })
 
 
-Tab:AddButton({
+Tab3:AddButton({
 	Name = "Insurgent hub",
 	Callback = function()
       	 loadstring(game:HttpGet('https://raw.githubusercontent.com/InsurgenceHub/IncurgenceHub.github.io/main/InsurgentHubOfficial'))()
@@ -126,7 +126,7 @@ Tab:AddButton({
 })
 
 
-Tab:AddButton({
+Tab3:AddButton({
 	Name = "Oasis Hub",
 	Callback = function()
       	 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/bruvzz/oasishub/main/script"))()
@@ -145,19 +145,19 @@ Tab:AddButton({
 
 
 
-local Tab = Window:MakeTab({
+local Tab4 = Window:MakeTab({
 	Name = "Murder Mystery 2",
 	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
 
-local Section = Tab:AddSection({
+local Section = Tab4:AddSection({
 	Name = "Murder Mystery 2 Hileleri"
 })
 
 
-Tab:AddButton({
+Tab4:AddButton({
 	Name = "AutoFarm",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-AutoFarm-Coins_503"))()
@@ -165,7 +165,7 @@ Tab:AddButton({
 })
 
 
-Tab:AddButton({
+Tab4:AddButton({
 	Name = "Eclipse",
 	Callback = function()
       		getgenv().mainKey = "nil";
@@ -175,7 +175,7 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 })
 
 
-Tab:AddButton({
+Tab4:AddButton({
 	Name = "Kidachi Two",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
@@ -192,18 +192,18 @@ Tab:AddButton({
 
 
 
-local Tab = Window:MakeTab({
+local Tab5 = Window:MakeTab({
 	Name = "Ayarlar",
 	Icon = "rbxassetid://7743866778",
 	PremiumOnly = false
 }) 
 
-local Section = Tab:AddSection({
+local Section = Tab5:AddSection({
 	Name = "Ayarlar"
 })
 
 
-Tab:AddToggle({
+Tab5:AddToggle({
 	Name = "Otur",
 	Default = false,
 	Callback = function(Value)
@@ -220,7 +220,7 @@ local WalkSpeed
 local JumpPower
 
 
-Tab:AddSlider({
+Tab5:AddSlider({
 	Name = "Hız",
 	Min = 0,
 	Max = 100,
@@ -235,7 +235,7 @@ Tab:AddSlider({
 	end    
 })
 
-Tab:AddButton({
+Tab5:AddButton({
 	Name = "Hızı Sıfırla",
 	Callback = function()
         OrionLib:MakeNotification({
@@ -251,7 +251,7 @@ WalkSpeed = 16
 
 
 
-Tab:AddSlider({
+Tab5:AddSlider({
 	Name = "Zıplama Gücü",
 	Min = 0,
 	Max = 1000,
@@ -266,7 +266,7 @@ Tab:AddSlider({
 	end    
 })
 
-Tab:AddButton({
+Tab5:AddButton({
 	Name = "Zıplama Gücünü Sıfırla",
 	Callback = function()
         OrionLib:MakeNotification({
