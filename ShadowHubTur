@@ -241,7 +241,7 @@ Tab:AddButton({
         OrionLib:MakeNotification({
 	Name = "               Hız",
 	Content = "Hızını Başarılıyla Sıfırladık Şimdiki Hızın (16)",
-	Image = "rbxassetid://0",
+	Image = "rbxassetid://7733715400",
 	Time = 5
 })
 WalkSpeed = 16
@@ -272,10 +272,12 @@ Tab:AddButton({
         OrionLib:MakeNotification({
 	Name = "               Zıplama Gücü",
 	Content = "Zıplama Gücün Başarılıyla Sıfırladık Şimdi Zıplama Gücün (50)",
-	Image = "rbxassetid://0",
+	Image = "rbxassetid://7733715400",
 	Time = 5
 })
 JumpPower = 50
     	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
         end
 })
+
+OrionLib:Init()
