@@ -203,11 +203,9 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 }) 
 
-
-
-local WalkSpeed
-
-local JumpPower
+local Section = Tab:AddSection({
+	Name = "Ayarlar"
+})
 
 
 Tab:AddToggle({
@@ -220,6 +218,11 @@ Tab:AddToggle({
         game.Players.LocalPlayer.Character.Humanoid.Sit = false
         end
 })
+
+
+local WalkSpeed
+
+local JumpPower
 
 
 Tab:AddSlider({
@@ -236,19 +239,6 @@ Tab:AddSlider({
          Value = WalkSpeed
 	end    
 })
-
-
-Tab:AddTextbox({
-	Name = "deneme 1",
-	Default = "deneme2",
-	TextDisappear = true,
-	Callback = function(Value)
-		WalkSpeed = Value
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-         Value = WalkSpeed
-	end	  
-})
-
 
 
 Tab:AddButton({
