@@ -250,35 +250,6 @@ Tab1:AddToggle({
 	end    
 })
 
-local inf_jump_conn1 = nil;
-local inf_jump_conn2 = nil;
-
-local inf_jump_can_jump = true;
-
-function ToggleInfJump(toggle)
-    if toggle then
-        inf_jump_conn1 = uis.JumpRequest:Connect(function()
-            if (hum) and (hum.Health > 0) and (inf_jump_can_jump == true) then
-                hum:ChangeState(Enum.HumanoidStateType.Jumping);
-                inf_jump_can_jump = false;
-            end
-        end)
-        inf_jump_conn2 = uis.InputEnded:Connect(function(input, _)
-            if input.KeyCode == Enum.KeyCode.Space then
-                inf_jump_can_jump = true;
-            end
-        end)
-    else
-        pcall(function()
-            inf_jump_conn1:Disconnect();
-        end)
-        inf_jump_conn1 = nil;
-        pcall(function()
-            inf_jump_conn2:Disconnect();
-        end)
-        inf_jump_conn2 = nil;
-    end
-end
 
 
 
