@@ -238,7 +238,7 @@ local Tab = Window:MakeTab({
 
 
 local Default_Disable = false;
-Tab1:AddToggle({
+Tab:AddToggle({
 	Name = "Sınırsız Zıplama",
 	Default = false,
 	Callback = function(Value)
