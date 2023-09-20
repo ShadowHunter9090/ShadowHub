@@ -2,6 +2,106 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sha
 local Window = OrionLib:MakeWindow({Name = "ShadowHub", HidePremium = false, SaveConfig = true, ConfigFolder = "ShadowHub"})
 
 
+local Tab1 = Window:MakeTab({
+	Name = "Ayarlar",
+	Icon = "rbxassetid://7743866778",
+	PremiumOnly = false
+}) 
+
+local Section = Tab1:AddSection({
+	Name = "Ayarlar"
+})
+
+
+Tab1:AddToggle({
+	Name = "Otur",
+	Default = false,
+	Callback = function(Value)
+		if Value == true then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = true
+        elseif Value == false then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = false
+        end
+})
+
+
+local WalkSpeed
+
+local JumpPower
+
+
+Tab1:AddSlider({
+	Name = "Hız",
+	Min = 0,
+	Max = 100,
+	Default = 16,
+	Color = Color3.fromRGB(125,125,125),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(Value)
+    WalkSpeed = Value
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+         Value = WalkSpeed
+	end    
+})
+
+Tab1:AddButton({
+	Name = "Hızı Sıfırla",
+	Callback = function()
+        OrionLib:MakeNotification({
+	Name = "               Hız",
+	Content = "Hızını Başarılıyla Sıfırladık Şimdiki Hızın (16)",
+	Image = "rbxassetid://7733715400",
+	Time = 5
+})
+WalkSpeed = 16
+    	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+})
+
+
+
+Tab1:AddSlider({
+	Name = "Zıplama Gücü",
+	Min = 0,
+	Max = 1000,
+	Default = 50,
+	Color = Color3.fromRGB(125,125,125),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(Value)
+    JumpPower = Value
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+        Value = JumpPower
+	end    
+})
+
+Tab1:AddButton({
+	Name = "Zıplama Gücünü Sıfırla",
+	Callback = function()
+        OrionLib:MakeNotification({
+	Name = "               Zıplama Gücü",
+	Content = "Zıplama Gücün Başarılıyla Sıfırladık Şimdi Zıplama Gücün (50)",
+	Image = "rbxassetid://7733715400",
+	Time = 5
+})
+JumpPower = 50
+    	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        end
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 OrionLib:MakeNotification({
 	Name = "Shadow Hub Mesajı",
 	Content = "Shadow Hub Çalıştı İyi Oyunlar.",
@@ -13,19 +113,26 @@ OrionLib:MakeNotification({
 
 
 
-local Tab1 = Window:MakeTab({
+
+
+
+
+
+
+
+local Tab2 = Window:MakeTab({
 	Name = "Ev",
 	Icon = "rbxassetid://7733960981",
 	PremiumOnly = false
 })
 
 
-local Section = Tab1:AddSection({
+local Section = Tab2:AddSection({
 	Name = "Krediler"
 })
 
 
-Tab1:AddButton({
+Tab2:AddButton({
 	Name = "Kurucu:eymen53472",
 	Callback = function()
       		print("ShadowHub en iyisi")
@@ -33,7 +140,7 @@ Tab1:AddButton({
 })
 
 
-Tab1:AddButton({
+Tab2:AddButton({
 	Name = "Kod:eymen53472",
 	Callback = function()
       		print("ShadowHub en iyisi")
@@ -44,19 +151,26 @@ Tab1:AddButton({
 
 
 
-local Tab2 = Window:MakeTab({
+
+
+
+
+
+
+
+local Tab3 = Window:MakeTab({
 	Name = "Brookhaven 🏡RP",
 	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
 
-local Section = Tab2:AddSection({
+local Section = Tab3:AddSection({
 	Name = "Brookhaven Hileleri"
 })
 
 
-Tab2:AddButton({
+Tab3:AddButton({
 	Name = "Redz Hub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
@@ -64,7 +178,7 @@ Tab2:AddButton({
 })
 
 
-Tab2:AddButton({
+Tab3:AddButton({
 	Name = "İceHub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
@@ -72,7 +186,7 @@ Tab2:AddButton({
 })
 
 
-Tab2:AddButton({
+Tab3:AddButton({
 	Name = "SpaceHub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
@@ -90,19 +204,19 @@ Tab2:AddButton({
 
 
 
-local Tab3 = Window:MakeTab({
+local Tab4 = Window:MakeTab({
 	Name = "Murderer Vs S.D.",
 	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
 
-local Section = Tab3:AddSection({
+local Section = Tab4:AddSection({
 	Name = "Murderer Vs Sheriff Duels Hileleri"
 })
 
 
-Tab3:AddButton({
+Tab4:AddButton({
 	Name = "Fastest Auto Farm Gui",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Murderers-VS-Sheriffs-Duels-Fastest-Auto-Farm-GUI-7659"))()
@@ -110,7 +224,7 @@ Tab3:AddButton({
 })
 
 
-Tab3:AddButton({
+Tab4:AddButton({
 	Name = "Ranxware Hub",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
@@ -118,7 +232,7 @@ Tab3:AddButton({
 })
 
 
-Tab3:AddButton({
+Tab4:AddButton({
 	Name = "Insurgent hub",
 	Callback = function()
       	 loadstring(game:HttpGet('https://raw.githubusercontent.com/InsurgenceHub/IncurgenceHub.github.io/main/InsurgentHubOfficial'))()
@@ -126,7 +240,7 @@ Tab3:AddButton({
 })
 
 
-Tab3:AddButton({
+Tab4:AddButton({
 	Name = "Oasis Hub",
 	Callback = function()
       	 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/bruvzz/oasishub/main/script"))()
@@ -145,19 +259,19 @@ Tab3:AddButton({
 
 
 
-local Tab4 = Window:MakeTab({
+local Tab5 = Window:MakeTab({
 	Name = "Murder Mystery 2",
 	Icon = "rbxassetid://7733765307",
 	PremiumOnly = false
 })
 
 
-local Section = Tab4:AddSection({
+local Section = Tab5:AddSection({
 	Name = "Murder Mystery 2 Hileleri"
 })
 
 
-Tab4:AddButton({
+Tab5:AddButton({
 	Name = "AutoFarm",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-AutoFarm-Coins_503"))()
@@ -165,7 +279,7 @@ Tab4:AddButton({
 })
 
 
-Tab4:AddButton({
+Tab5:AddButton({
 	Name = "Eclipse",
 	Callback = function()
       		getgenv().mainKey = "nil";
@@ -175,109 +289,9 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 })
 
 
-Tab4:AddButton({
+Tab5:AddButton({
 	Name = "Kidachi Two",
 	Callback = function()
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
   	end    
 })
-
-
-
-
-
-
-
-
-
-
-
-local Tab5 = Window:MakeTab({
-	Name = "Ayarlar",
-	Icon = "rbxassetid://7743866778",
-	PremiumOnly = false
-}) 
-
-local Section = Tab5:AddSection({
-	Name = "Ayarlar"
-})
-
-
-Tab5:AddToggle({
-	Name = "Otur",
-	Default = false,
-	Callback = function(Value)
-		if Value == true then
-        game.Players.LocalPlayer.Character.Humanoid.Sit = true
-        elseif Value == false then
-        game.Players.LocalPlayer.Character.Humanoid.Sit = false
-        end
-})
-
-
-local WalkSpeed
-
-local JumpPower
-
-
-Tab5:AddSlider({
-	Name = "Hız",
-	Min = 0,
-	Max = 100,
-	Default = 16,
-	Color = Color3.fromRGB(125,125,125),
-	Increment = 1,
-	ValueName = "",
-	Callback = function(Value)
-    WalkSpeed = Value
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-         Value = WalkSpeed
-	end    
-})
-
-Tab5:AddButton({
-	Name = "Hızı Sıfırla",
-	Callback = function()
-        OrionLib:MakeNotification({
-	Name = "               Hız",
-	Content = "Hızını Başarılıyla Sıfırladık Şimdiki Hızın (16)",
-	Image = "rbxassetid://7733715400",
-	Time = 5
-})
-WalkSpeed = 16
-    	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-        end
-})
-
-
-
-Tab5:AddSlider({
-	Name = "Zıplama Gücü",
-	Min = 0,
-	Max = 1000,
-	Default = 50,
-	Color = Color3.fromRGB(125,125,125),
-	Increment = 1,
-	ValueName = "",
-	Callback = function(Value)
-    JumpPower = Value
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-        Value = JumpPower
-	end    
-})
-
-Tab5:AddButton({
-	Name = "Zıplama Gücünü Sıfırla",
-	Callback = function()
-        OrionLib:MakeNotification({
-	Name = "               Zıplama Gücü",
-	Content = "Zıplama Gücün Başarılıyla Sıfırladık Şimdi Zıplama Gücün (50)",
-	Image = "rbxassetid://7733715400",
-	Time = 5
-})
-JumpPower = 50
-    	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-        end
-})
-
-OrionLib:Init()
