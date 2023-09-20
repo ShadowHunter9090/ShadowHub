@@ -2,9 +2,41 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sha
 local Window = OrionLib:MakeWindow({Name = "ShadowHub", HidePremium = false, SaveConfig = true, ConfigFolder = "ShadowHub"})
 
 
+local inf_jump_conn1 = nil;
+local inf_jump_conn2 = nil;
+
+local inf_jump_can_jump = true;
+
+function ToggleInfJump(toggle)
+    if toggle then
+        inf_jump_conn1 = uis.JumpRequest:Connect(function()
+            if (hum) and (hum.Health > 0) and (inf_jump_can_jump == true) then
+                hum:ChangeState(Enum.HumanoidStateType.Jumping);
+                inf_jump_can_jump = false;
+            end
+        end)
+        inf_jump_conn2 = uis.InputEnded:Connect(function(input, _)
+            if input.KeyCode == Enum.KeyCode.Space then
+                inf_jump_can_jump = true;
+            end
+        end)
+    else
+        pcall(function()
+            inf_jump_conn1:Disconnect();
+        end)
+        inf_jump_conn1 = nil;
+        pcall(function()
+            inf_jump_conn2:Disconnect();
+        end)
+        inf_jump_conn2 = nil;
+    end
+end
+
+
+
 OrionLib:MakeNotification({
 	Name = "Shadow Hub Mesajı",
-	Content = "Shadow Hub Çalıştı İyi Oyunlar",
+	Content = "Shadow Hub Çalıştı İyi Oyunlar.",
 	Image = "rbxassetid://7733799901",
 	Time = 7
 })
@@ -60,7 +92,7 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Redz Hub",
 	Callback = function()
-	loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-REDz-HUB-6559"))()
   	end    
 })
 
@@ -68,7 +100,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "İceHub",
 	Callback = function()
-	loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Ice-Hub-6414"))()
   	end    
 })
 
@@ -76,7 +108,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "SpaceHub",
 	Callback = function()
-	loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Space-Hub-7295"))()
   	end    
 })
 
@@ -105,8 +137,8 @@ local Section = Tab:AddSection({
 
 Tab:AddButton({
 	Name = "Fastest Auto Farm Gui",
-	Callback = function() 
-	loadstring(game:HttpGet("https://scriptblox.com/raw/Murderers-VS-Sheriffs-Duels-Fastest-Auto-Farm-GUI-7659"))()
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murderers-VS-Sheriffs-Duels-Fastest-Auto-Farm-GUI-7659"))()
   	end    
 })
 
@@ -114,7 +146,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Ranxware Hub",
 	Callback = function()
-	loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/TRADING-Murderers-VS-Sheriffs-Duels-Ken-Script-7120"))()
   	end    
 })
 
@@ -122,7 +154,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Insurgent hub",
 	Callback = function()
- loadstring(game:HttpGet('https://raw.githubusercontent.com/InsurgenceHub/IncurgenceHub.github.io/main/InsurgentHubOfficial'))()
+      	 loadstring(game:HttpGet('https://raw.githubusercontent.com/InsurgenceHub/IncurgenceHub.github.io/main/InsurgentHubOfficial'))()
   	end    
 })
 
@@ -130,7 +162,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Oasis Hub",
 	Callback = function()
- loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/bruvzz/oasishub/main/script"))()
+      	 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/bruvzz/oasishub/main/script"))()
   	end    
 })
 
@@ -161,7 +193,7 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "AutoFarm",
 	Callback = function()
-	loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-AutoFarm-Coins_503"))()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-AutoFarm-Coins_503"))()
   	end    
 })
 
@@ -169,7 +201,6 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Eclipse",
 	Callback = function()
-
       		getgenv().mainKey = "nil";
  
 local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https\58//api.eclipsehub.xyz/auth";c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
@@ -180,9 +211,14 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 Tab:AddButton({
 	Name = "Kidachi Two",
 	Callback = function()
-	loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
   	end    
 })
+
+
+
+
+
 
 
 
@@ -201,23 +237,6 @@ local Tab = Window:MakeTab({
 }) 
 
 
-local Section = Tab:AddSection({
-	Name = "Ayarlar"
-})
-
-
-Tab:AddToggle({
-	Name = "Otur",
-	Default = false,
-	Callback = function(Value)
-		if Value == true then
-        game.Players.LocalPlayer.Character.Humanoid.Sit = true
-        elseif Value == false then
-        game.Players.LocalPlayer.Character.Humanoid.Sit = false
-      end
-})
-
-
 local Default_Disable = false;
 Tab1:AddToggle({
 	Name = "Sınırsız Zıplama",
@@ -231,11 +250,56 @@ Tab1:AddToggle({
 	end    
 })
 
+local inf_jump_conn1 = nil;
+local inf_jump_conn2 = nil;
+
+local inf_jump_can_jump = true;
+
+function ToggleInfJump(toggle)
+    if toggle then
+        inf_jump_conn1 = uis.JumpRequest:Connect(function()
+            if (hum) and (hum.Health > 0) and (inf_jump_can_jump == true) then
+                hum:ChangeState(Enum.HumanoidStateType.Jumping);
+                inf_jump_can_jump = false;
+            end
+        end)
+        inf_jump_conn2 = uis.InputEnded:Connect(function(input, _)
+            if input.KeyCode == Enum.KeyCode.Space then
+                inf_jump_can_jump = true;
+            end
+        end)
+    else
+        pcall(function()
+            inf_jump_conn1:Disconnect();
+        end)
+        inf_jump_conn1 = nil;
+        pcall(function()
+            inf_jump_conn2:Disconnect();
+        end)
+        inf_jump_conn2 = nil;
+    end
+end
+
+
+
 
 
 local WalkSpeed
 
 local JumpPower
+
+
+Tab:AddToggle({
+	Name = "Otur",
+	Default = false,
+	Callback = function(Value)
+		if Value == true then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = true
+        elseif Value == false then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = false
+        end
+})
+
 
 Tab:AddSlider({
 	Name = "Hız",
@@ -251,6 +315,19 @@ Tab:AddSlider({
          Value = WalkSpeed
 	end    
 })
+
+
+Tab:AddTextbox({
+	Name = "deneme 1",
+	Default = "deneme2",
+	TextDisappear = true,
+	Callback = function(Value)
+		WalkSpeed = Value
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+         Value = WalkSpeed
+	end	  
+})
+
 
 
 Tab:AddButton({
@@ -292,41 +369,8 @@ Tab:AddButton({
 	Image = "rbxassetid://0",
 	Time = 5
 })
+
 JumpPower = 50
     	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
         end
 })
-
-
-
-
-
-local inf_jump_conn1 = nil;
-local inf_jump_conn2 = nil;
-
-local inf_jump_can_jump = true;
-
-function ToggleInfJump(toggle)
-    if toggle then
-        inf_jump_conn1 = uis.JumpRequest:Connect(function()
-            if (hum) and (hum.Health > 0) and (inf_jump_can_jump == true) then
-                hum:ChangeState(Enum.HumanoidStateType.Jumping);
-                inf_jump_can_jump = false;
-            end
-        end)
-        inf_jump_conn2 = uis.InputEnded:Connect(function(input, _)
-            if input.KeyCode == Enum.KeyCode.Space then
-                inf_jump_can_jump = true;
-            end
-        end)
-    else
-        pcall(function()
-            inf_jump_conn1:Disconnect();
-        end)
-        inf_jump_conn1 = nil;
-        pcall(function()
-            inf_jump_conn2:Disconnect();
-        end)
-        inf_jump_conn2 = nil;
-    end
-end
