@@ -256,5 +256,3 @@ Tp4Tab:AddSlider({
             game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
         end    
     })
-
-end
