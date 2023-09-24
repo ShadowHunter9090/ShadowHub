@@ -4,12 +4,12 @@ local Window = OrionLib:MakeWindow({Name = "Shadow Hub : "..gameName, HidePremiu
 
 local Shadow = Window:MakeTab({Name = "Main",Icon = "rbxassetid://13687632207",PremiumOnly = false})
 
-Shadow:AddButton({Name = "Shadow Hub ama Türkçe",Callback = function()
+Shadow:AddButton({Name = "Shadow Hub ama Türkçe",Callback =  function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShadowHunter9090/ShadowHub/main/ShadowHubTur"))()
 end})
 
 
-Shadow:AddButton({Name = "Shadow Hub ın English",Callback = function()
+Shadow:AddButton({Name = "Shadow Hub ın English",Callback =  function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShadowHunter9090/ShadowHub/main/ShadowHubEng"))()
 end})
 
