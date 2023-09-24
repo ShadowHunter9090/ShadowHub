@@ -181,3 +181,68 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://scriptblox.com/raw/Murder-Mystery-2-Kidachi-Two-6616"))()
   	end    
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local Tab1 = Window:MakeTab({
+	Name = "Ayarlar",
+	Icon = "rbxassetid://7743866778",
+	PremiumOnly = false
+}) 
+
+local Section = Tab1:AddSection({
+	Name = "Ayarlar"
+})
+
+
+Tab1:AddToggle({
+	Name = "Otur",
+	Default = false,
+	Callback = function(Value)
+		if Value == true then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = true
+        elseif Value == false then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = false
+        end
+})
+
+
+Tp4Tab:AddSlider({
+        Name = "Change Speed Power",
+        Min = 16,
+        Max = 1000,
+        Default = 5,
+        Color = Color3.fromRGB(255,255,255),
+        Increment = 1,
+        ValueName = "Speed",
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        end    
+    })
+    
+    Tp4Tab:AddSlider({
+        Name = "Change Jump Power",
+        Min = 16,
+        Max = 1000,
+        Default = 5,
+        Color = Color3.fromRGB(255,255,255),
+        Increment = 1,
+        ValueName = "Jump",
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+        end    
+    })
+
+end
