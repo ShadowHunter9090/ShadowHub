@@ -219,7 +219,7 @@ Tab1:AddToggle({
 })
 
 
-Tp4Tab:AddSlider({
+Tab1:AddSlider({
         Name = "Change Speed Power",
         Min = 16,
         Max = 1000,
@@ -232,7 +232,7 @@ Tp4Tab:AddSlider({
         end    
     })
     
-    Tp4Tab:AddSlider({
+    Tab1:AddSlider({
         Name = "Change Jump Power",
         Min = 16,
         Max = 1000,
