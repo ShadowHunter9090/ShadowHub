@@ -196,7 +196,7 @@ Tab:AddButton({
 
 
 
-local Tab = Window:MakeTab({
+local Tp4Tab = Window:MakeTab({
 	Name = "Ayarlar",
 	Icon = "rbxassetid://7743866778",
 	PremiumOnly = false
@@ -207,7 +207,7 @@ local Section = Tab1:AddSection({
 })
 
 
-Tab:AddToggle({
+Tp4Tab:AddToggle({
 	Name = "Otur",
 	Default = false,
 	Callback = function(Value)
@@ -219,7 +219,19 @@ Tab:AddToggle({
 })
 
 
-Tab:AddSlider({
+Tp4Tab:AddButton({
+        Name = "Anti AFK",
+        Callback = function()
+            local vu = game:GetService("VirtualUser")
+            game:GetService("Players").LocalPlayer.Idled:connect(function()
+                vu:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+                wait(1)
+                vu:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+            end)
+        end
+    })
+
+Tp4Tab:AddSlider({
         Name = "Change Speed Power",
         Min = 16,
         Max = 1000,
@@ -232,7 +244,7 @@ Tab:AddSlider({
         end    
     })
     
-    Tab:AddSlider({
+    Tp4Tab:AddSlider({
         Name = "Change Jump Power",
         Min = 16,
         Max = 1000,
@@ -246,15 +258,3 @@ Tab:AddSlider({
     })
 
 end
-
-Tab:AddButton({
-        Name = "Anti AFK",
-        Callback = function()
-            local vu = game:GetService("VirtualUser")
-            game:GetService("Players").LocalPlayer.Idled:connect(function()
-                vu:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-                wait(1)
-                vu:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-            end)
-        end
-    })
