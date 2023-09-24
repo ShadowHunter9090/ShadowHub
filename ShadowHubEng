@@ -196,7 +196,7 @@ Tab:AddButton({
 
 
 
-local Tab1 = Window:MakeTab({
+local Tab = Window:MakeTab({
 	Name = "Ayarlar",
 	Icon = "rbxassetid://7743866778",
 	PremiumOnly = false
@@ -207,7 +207,7 @@ local Section = Tab1:AddSection({
 })
 
 
-Tab1:AddToggle({
+Tab:AddToggle({
 	Name = "Otur",
 	Default = false,
 	Callback = function(Value)
@@ -219,7 +219,7 @@ Tab1:AddToggle({
 })
 
 
-Tab1:AddSlider({
+Tab:AddSlider({
         Name = "Change Speed Power",
         Min = 16,
         Max = 1000,
@@ -232,7 +232,7 @@ Tab1:AddSlider({
         end    
     })
     
-    Tab1:AddSlider({
+    Tab:AddSlider({
         Name = "Change Jump Power",
         Min = 16,
         Max = 1000,
