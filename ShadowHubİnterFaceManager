@@ -102,12 +102,12 @@ local InterfaceManager = {} do
 			end
 		})
 	
-		local MenuKeybind = section:AddKeybind("MenuKeybind", { Title = "Minimize Bind", Default = Settings.MenuKeybind })
-		MenuKeybind:OnChanged(function()
-			Settings.MenuKeybind = MenuKeybind.Value
+		local MenuKeybind = section:AddKeybind("Delete", { Title = "Minimize Bind", Default = Settings.Delete })
+		Delete:OnChanged(function()
+			Settings.Delete = Delete.Value
             InterfaceManager:SaveSettings()
 		end)
-		Library.MinimizeKeybind = MenuKeybind
+		Library.MinimizeKeybind = Delete
     end
 end
 
